@@ -10,15 +10,21 @@ STEP:
 * Use the tsc command to check the file for type errors.
 * Error! It looks like one of the values assigned to phoneNumber isn’t valid. Fix that value per TypeScript’s type complaints (And notice that the randomness introduced by Math.random() has no impact on whether TypeScript finds the type error).
 
+```js
+let phoneNumber;
+
+if (Math.random() > 0.5) {
+  phoneNumber = "+61770102062";
+} else {
+  phoneNumber = 7167762323;
+}
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/DYUwLgBADgFg9gOxAOQK4FsBGIBOBuAKAIEsAzCACgFkBDMGAOhxoQBM50KBKCAPggAMDAKw8A3gQjR4SNFlwQAvBABEAagBsARgDsOgVoEAmARqMrCAXwghgAZxAQJU2IhQZsOJRB1aNeswBmI0CrIA)
+
+**Solution:**
+
 ```ts
-// let phoneNumber;
-
-// if (Math.random() > 0.5) {
-//   phoneNumber = "+61770102062";
-// } else {
-//   phoneNumber = 7167762323;
-// }
-
 let phoneNumber: string;
 
 if (Math.random() > 0.5) {
@@ -27,6 +33,7 @@ if (Math.random() > 0.5) {
   phoneNumber = "7167762323";
 }
 ```
+
 
 ## 02 - FUNCTIONS: Parameter Type Annotations
 
