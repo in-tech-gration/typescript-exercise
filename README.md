@@ -44,17 +44,23 @@ STEP:
 * Everything seems to look good. Let’s quickly compile our code and move on to the next exercise. To do this, simply run tsc in the terminal.
 * Woah! TypeScript found a bug, thanks to our type annotations. It looks like greetTripled() is being called with the wrong types of arguments. Fix the code to print Hiya, 15!.
 
+```js
+function triple(value) {
+  return value * 3;
+}
+
+function greetTripled(greeting, value) {
+  console.log(`${greeting}, ${triple(value)}!`);
+}
+
+greetTripled(5, "Hiya");
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABFATjADgGwKYAoBuAhpiNgJSIDeAUIoitlCCkkSdogFSIDMA3NQC+1aqEiwEiAOYNGAFTRZsAE1wzsjGGCkAaRG1IUadCAgDOcHADpMcKbgAGAEkrrN2wXpeoMOAsUNBAEIHMgFhajcoBV8VXABWPQAiAAkYAE9CJLCgA)
+
+**Solution:**
+
 ```ts
-// function triple(value) {
-//   return value * 3;
-// }
-
-// function greetTripled(greeting, value) {
-//   console.log(`${greeting}, ${triple(value)}!`);
-// }
-
-// greetTripled(5, "Hiya");
-
 function triple(value: number) {
   return value * 3;
 }
@@ -90,6 +96,8 @@ proclaim("ready?");
 proclaim("ready!");
 ```
 
+[Try in TS Playground](#)
+
 ## 04 - FUNCTIONS: Default Parameters
 
 STEP:
@@ -118,6 +126,8 @@ proclaim();
 proclaim("ready?");
 proclaim("ready!", 3);
 ```
+
+[Try in TS Playground](#)
 
 ## 05 - FUNCTIONS: Inferring Return Types
 
