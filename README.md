@@ -1,6 +1,4 @@
-# TYPESCRIPT EXERCISES
-
-Typescript exercises that I solved.
+# TypeScript Exercises
 
 ## 01 - Variable Type Annotations
 
