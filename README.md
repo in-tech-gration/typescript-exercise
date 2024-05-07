@@ -143,10 +143,16 @@ Challenge! Using what you’ve learned above, create a variable myVar with the t
 * You may not use functions other than the one provided in index.ts.
 
 ```ts
-// function getRandomNumber() {
-//   return Math.random();
-// }
+function getRandomNumber() {
+  return Math.random();
+}
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAcwKZQEoEMwBM4C2AciAQEaoBOAFAJSIDeAUIopeiJUgLJZQAWAOko58BOgG4mAXyA)
+
+**Solution:**
+
+```ts
 function getRandomNumber() {
   return Math.random();
 }
@@ -160,13 +166,19 @@ const myVar = getRandomNumber();
 * It looks like the type annotation for the return type of makeFruitSalad() isn’t quite right. Please correct this!
 
 ```ts
-// function makeFruitSalad(fruit1: string, fruit2: string): string {
-//   let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
-//   console.log(salad);
-// }
+function makeFruitSalad(fruit1: string, fruit2: string): string {
+  let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
+  console.log(salad);
+}
 
-// makeFruitSalad("banana", "pineapple");
+makeFruitSalad("banana", "pineapple");
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAWwIYGsCmAxATiGKAZVQBtUATACmH0IEYAuRAZylxjAHMAaRWglABMzNh24BKUe05dEAbwBQiRKUxRWZSogC8-OlHqIA1PsFCTZwhdMCGlu8IcGjtlwG5liCAhZw1AHSkcFxULFoUEp4AvoqKaFh4giTk1ABEAEaoYNmoaXxpAA6cmKiFhWppUYpAA)
+
+**Solution:**
+
+```ts
 function makeFruitSalad(fruit1: string, fruit2: string): void {
   let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
   console.log(salad);
@@ -174,6 +186,7 @@ function makeFruitSalad(fruit1: string, fruit2: string): void {
 
 makeFruitSalad("banana", "pineapple");
 ```
+
 
 ## 07 - FUNCTIONS: Documenting Functions
 
@@ -237,6 +250,10 @@ function proclaim(status = 'not ready...', repeat = 1) {
 }
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 08 - ARRAYS: Array Type Annotations
 
 The code editor contains several array assignments. Add the appropriate type annotations to the array variables in the // Arrays: section.
@@ -259,6 +276,10 @@ let bestLunches: string[] = ['chicken soup', 'non-chicken soup'];
 let bestBreakfasts: string[] = ['scrambled eggs', 'oatmeal', 'tamago kake gohan', 'any kind of soup'];
 let bestBooleans: boolean[] = [true, false];
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 09 - ARRAYS: Multi-dimensional Arrays
 
@@ -307,6 +328,10 @@ let numbersMulti: number[][][] = [
 ];
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 10 - ARRAYS: Tuples
 
 STEP:
@@ -333,6 +358,10 @@ favoriteCoordinates = [17, 45, "N", 142, 30, "E"];
 favoriteCoordinates[6] = -6.825;
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 11 - ARRAYS: Array Type Inference
 
 STEP:
@@ -353,6 +382,10 @@ let dogTup: [string, string, string, string] = [
 let myArr = dogTup.concat(dogTup);
 myArr[50] = "not a dog";
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 12 - ARRAYS: Rest Parameters
 
@@ -380,6 +413,10 @@ function addPower(p: number, ...numsToAdd: number[]): number {
 
 addPower("a string", 4, 5, 6);
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 13 - ARRAYS: Spread Syntax
 
@@ -436,6 +473,10 @@ let danceMoves: [string, number, boolean][] = [
 danceMoves.forEach((move) => performDanceMove(...move));
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 14 - CUSTOM TYPES: Enums
 
 STEP:
@@ -476,6 +517,10 @@ const ordersArrayTS: [Pet, number][] = [
 ordersArrayTS.push([Pet.Jerboa, 3]);
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 15 - CUSTOM TYPES: String Enums vs. Numeric Enums
 
 STEP:
@@ -513,7 +558,11 @@ const ordersArrayTS: [Pet, number][] = [
 
 ordersArrayTS.push(["HAMSTER", 1]);
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 16 - CUSTOM TYPES: Object Types
 
 STEP:
@@ -579,7 +628,11 @@ let birthdayBabies: {
 
 birthdayBabies.forEach(sayHappyBirthdayWithObject);
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 17 - CUSTOM TYPES: Type Aliases
 
 STEP:
@@ -594,6 +647,10 @@ type Coord = [number, number, string, number, number, string];
 let codecademyCoordinates: Coord = [40, 43.2, "N", 73, 59.8, "W"];
 let bermudaTCoordinates: Coord = [25, 0, "N", 71, 0, "W"];
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 18 - CUSTOM TYPES: Function Types
 
@@ -696,6 +753,10 @@ function mathTutor(operationCallback: OperatorFunction) {
 mathTutor(wrongAdd);
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 19 - CUSTOM TYPES: Generic Types
 
 Please provide type annotations for the variables theFamily, someFamily, aFamily, and anotherFamily in the code editor. Where appropriate, use the predefined type aliases Human, Dog, and the generic type Family<T>.
@@ -719,6 +780,10 @@ personArray = getFilledArray<{ name: string; age: number }>(
 );
 coordinateArray = getFilledArray<[number, number]>([3, 4], 6);
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 20 - CUSTOM TYPES: Generic Functions
 
@@ -754,6 +819,10 @@ personArray = getFilledArray<{ name: string; age: number }>(
 coordinateArray = getFilledArray<[number, number]>([3, 4], 6);
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 21 - UNION TYPES: Defining Unions
 
 STEP
@@ -777,7 +846,11 @@ function printNumsAndStrings(statement: string | number) {
 printNumsAndStrings("hello!");
 printNumsAndStrings(3);
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 22 - UNION TYPES: Type Narrowing
 
 STEP
@@ -806,7 +879,11 @@ function formatValue(value: string | number) {
 formatValue("Hiya");
 formatValue(42);
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 23 - UNION TYPES: Inferred Union Return Types
 
 In the editor, we have a User type that describes a user. In addition, there’s a function named createUser() that randomly returns a user or an error message (we’re simulating a call to a server that might fail). We’d like to call the createUser() function, then store its response in a typed variable.
@@ -846,6 +923,10 @@ function createUser() {
 
 let userData: User | string = createUser();
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 24 - UNION TYPES: Unions and Arrays
 
@@ -896,7 +977,11 @@ const result = formatListings([
 
 console.log(result);
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 25 - UNION TYPES: Common Key Value Pairs
 
 In the editor, we’ve written a program that should display a message about a social media event. The getFriendNameFromEvent() function takes an event, then returns the friend’s displayName or username. Let’s start by adding a type to the getFriendNameFromEvent()’s event parameter. Use a union to allow event to be a Like or a Share, then save your code.
@@ -955,6 +1040,10 @@ const friendName = getFriendNameFromEvent(newEvent);
 console.log(`You have an update from ${friendName}.`);
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 26 - UNION TYPES: Unions with Literal Types
 
 STEP:
@@ -981,7 +1070,11 @@ function downloadStatus(status: Status) {
 
 downloadStatus("idle");
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 27 - TYPE NARROWING: Type guards
 
 STEP:
@@ -1002,6 +1095,10 @@ function formatStatistic(stat: string | number) {
 console.log(formatStatistic("WIN"));
 console.log(formatStatistic(0.36));
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 28 - TYPE NARROWING: Using in with Type Guards
 
@@ -1046,6 +1143,10 @@ function move(pet: Cat | Fish) {
 console.log(move(siameseCat));
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 29 - TYPE NARROWING: Narrowing with else
 
 STEP:
@@ -1084,7 +1185,11 @@ function prepareEntree(entree: Pasta | Meat) {
 
 console.log(prepareEntree(fettuccine));
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 30 - TYPE NARROWING: Narrowing After a Type Guard
 
 In the editor, we’ve created a program that recycles variables of type Metal and Glass. The goal of the program is to sort out the trash of type Metal before the trash of type Glass.
@@ -1121,7 +1226,11 @@ function recycle(trash: Metal | Glass) {
 
 console.log(recycle(iron));
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 31 - ADVANCED OBJECT TYPES: Interfaces and Types
 
 STEP: 
@@ -1148,7 +1257,11 @@ updateRunGoal({
   miles: 5,
 });
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 32 - ADVANCED OBJECT TYPES: Interfaces and Classes
 
 STEP: 
@@ -1179,7 +1292,11 @@ const Desktop = new DesktopDirectory();
 Desktop.addFile("lesson-notes.txt");
 Desktop.showPreview("lesson-notes.txt");
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 33 - ADVANCED OBJECT TYPES: Deep Types
 
 STEP: 
@@ -1221,6 +1338,10 @@ const Desktop = new DesktopDirectory();
 
 console.log(Desktop.config);
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 34 - ADVANCED OBJECT TYPES: Deep Types
 
@@ -1300,6 +1421,10 @@ const Desktop = new DesktopDirectory();
 console.log(Desktop.config);
 ```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 35 - ADVANCED OBJECT TYPES: Extending Interfaces
 
 STEP: 
@@ -1327,6 +1452,10 @@ const me: Developer = {
 
 me.code();
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 36 - ADVANCED OBJECT TYPES: Index Signatures
 
@@ -1367,6 +1496,10 @@ async function getBudget() {
 
 getBudget();
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
 
 ## 37 - ADVANCED OBJECT TYPES: Optional Type Members
 
@@ -1413,7 +1546,11 @@ getUserName({
   username: "mountainClimber",
 });
 ```
-  
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
 ## 38 - CUSTOM TYPES: Generic Functions
 
 Creare una funzione che restituisca array riempito con un certo valore usando TypeScript e le sue generic function.
@@ -1425,3 +1562,7 @@ function getFilledArray<T>(value: T, n: number): T[] {
 }
 console.log(getFilledArray<string>("cheese", 3));
 ```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
