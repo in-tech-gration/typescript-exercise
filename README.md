@@ -108,16 +108,22 @@ STEP:
 * Now that proclaim() uses default parameters, remove the unnecessary || statements from its code.
 
 ```ts
-// function proclaim(status?: string, repeat?: number) {
-//   for (let i = 0; i < repeat || 0; i += 1) {
-//     console.log(`I'm ${status || "not ready..."}`);
-//   }
-// }
+function proclaim(status?: string, repeat?: number) {
+  for (let i = 0; i < repeat || 0; i += 1) {
+    console.log(`I'm ${status || "not ready..."}`);
+  }
+}
 
-// proclaim();
-// proclaim("ready?");
-// proclaim("ready!", 3);
+proclaim();
+proclaim("ready?");
+proclaim("ready!", 3);
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABABwE5wgGwIYwLYAUAzlNlCEQPwBciJqMYA5gDSKoCmyHZNiYIPACMOqAJSIA3gChEiYHFSICmDlEQxEAXkQAGANwbEAHnZce6gD6W9hzQGodARgky5ciAiJxVAOkxwTAQABgCSAOR4iAAkkiRkFIjWiABEYHDqnNgAJgCevgUpAL7BYvqyiEXSVdJoGDj4BGW16Fi4hClZeZQpzXVtjZ08eQCEKWwAzGVAA)
+
+**Solution:**
+
+```ts
 function proclaim(status = "not ready...", repeat = 1) {
   for (let i = 0; i < repeat; i += 1) {
     console.log(`I'm ${status}`);
@@ -128,9 +134,6 @@ proclaim();
 proclaim("ready?");
 proclaim("ready!", 3);
 ```
-
-[Try in TS Playground](#)
-
 ## 05 - FUNCTIONS: Inferring Return Types
 
 Challenge! Using what you’ve learned above, create a variable myVar with the type number. To make this more interesting:
