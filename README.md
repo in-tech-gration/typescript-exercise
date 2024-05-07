@@ -1521,6 +1521,33 @@ Run node index.js. You should see two formatted names appear.
   
 ```ts
 // Write an interface here
+
+function getUserName(options) {
+  if (options.firstName && options.lastName) {
+    return console.log(`${options.firstName} ${options.lastName}`);
+  }
+
+  return console.log(options.username);
+}
+
+getUserName({
+  firstName: "Mr.",
+  lastName: "Oshiro",
+  username: "hotelowner304",
+});
+
+getUserName({
+  firstName: "Madeline",
+  username: "mountainClimber",
+});
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/)
+
+**Solution:**
+
+```ts
+// Write an interface here
 interface UserNameOptions {
   firstName?: string;
   lastName?: string;
@@ -1547,22 +1574,24 @@ getUserName({
 });
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
+## 38 - CUSTOM TYPES: Generic Functions
+
+Create a function that returns arrays filled with a certain value using TypeScript and its generic functions. Set up a `tsconfig` that supports ES6 and allows TypeScript code to be compiled by running only the "tsc" command without specifying a filename.
+  
+```ts
+function getFilledArray(value, n) {
+  return Array(n).fill(value);
+}
+console.log(getFilledArray("cheese", 3));
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAcwKZQGIwDbdQEwEEAnYgQwE8AKANzOxFQBpEwBKRAbwChFFj0IYkhLlq7AHTAc2WvUZsA3NwC+3CAgDOcPBOxxkVNJhkFRlKgCIIAC1SpNqSywDMbJUA)
 
 **Solution:**
 
-## 38 - CUSTOM TYPES: Generic Functions
-
-Creare una funzione che restituisca array riempito con un certo valore usando TypeScript e le sue generic function.
-Impostare un tsconfig che supporti ES6 e permetta di compilare il codice di TypeScript lanciando solo il comando "tsc" senza specificare il nome del file.
-  
 ```ts
 function getFilledArray<T>(value: T, n: number): T[] {
   return Array(n).fill(value);
 }
 console.log(getFilledArray<string>("cheese", 3));
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
