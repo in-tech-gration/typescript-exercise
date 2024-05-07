@@ -77,14 +77,18 @@ Our proclaim() method is meant to default to printing 'I'm not ready...' when ca
 Afterwards, feel free to run tsc in the terminal to verify that there are no errors.
 
 ```ts
-// function proclaim(status: string) {
-//   console.log(`I'm ${status || "not ready..."}`);
-// }
+function proclaim(status: string) {
+  console.log(`I'm ${status || "not ready..."}`);
+}
 
-// proclaim();
-// proclaim("ready?");
-// proclaim("ready!");
+proclaim();
+proclaim("ready?");
+proclaim("ready!");
+```
 
+**Solution:**
+
+```ts
 function proclaim(status?: string) {
   console.log(`I'm ${status || "not ready..."}`);
 }
@@ -94,7 +98,7 @@ proclaim("ready?");
 proclaim("ready!");
 ```
 
-[Try in TS Playground](#)
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABABwE5wgGwIYwLYAUAzlNlCEQFyImoxgDmAlIgN4BQiiECRcmAUwB0mOAwIADAJIByPIgAkrEmQqIAPusQAiMHCiJUA7ABMAnkMvaAvhKYBudtfbs0GHPgIPX6LLkLaRqZmAPza3m5+noHG5gCE4fZAA)
 
 ## 04 - FUNCTIONS: Default Parameters
 
