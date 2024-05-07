@@ -1054,6 +1054,26 @@ STEP:
 * Now that we have a downloadStatus() function with distinct states, let’s call it! Call downloadStatus() with a valid argument.
 
 ```ts
+function downloadStatus(status) {
+  if (status === "idle") {
+    console.log("Download");
+  }
+  if (status === "downloading") {
+    console.log("Downloading...");
+  }
+  if (status === "complete") {
+    console.log("Your download is complete!");
+  }
+}
+
+downloadStatus("idle");
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAEzgdzAGzgQ2QZShyhAGcAKUok0gSkQG8AoRRGYRS6sxAXn8QAiGMkwBTQfWatWEBKTjiAdNgDm5QQBF0WXMkkBuFogC+x9pyrEe-XkNQZseGGFWTGx2fMViVcdVo6TsguqkrhhsZmrBZc1qR8AoJyALYADuJQElKeiHJgCspqGgCacCAATihBemwJqRliWQCEkaxmZkwOuniE8Roi4oZAA)
+
+**Solution:**
+
+```ts
 type Status = "idle" | "downloading" | "complete";
 
 function downloadStatus(status: Status) {
@@ -1070,10 +1090,6 @@ function downloadStatus(status: Status) {
 
 downloadStatus("idle");
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 27 - TYPE NARROWING: Type guards
 
