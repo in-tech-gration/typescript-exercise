@@ -207,17 +207,23 @@ Add a documentation comment proclaim() function. Your comment should include:
 * An @returns tag explaining what the function returns (again, in this case, nothing).
 
 ```ts
-// function makeFruitSalad(fruit1: string, fruit2: string): void {
-//   let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
-//   console.log(salad);
-// }
+function makeFruitSalad(fruit1: string, fruit2: string): void {
+  let salad = fruit1 + fruit2 + fruit2 + fruit1 + fruit2 + fruit1 + fruit1;
+  console.log(salad);
+}
 
-// function proclaim(status = "not ready...", repeat = 1) {
-//   for (let i = 0; i < repeat; i += 1) {
-//     console.log(`I'm ${status}`);
-//   }
-// }
+function proclaim(status = "not ready...", repeat = 1) {
+  for (let i = 0; i < repeat; i += 1) {
+    console.log(`I'm ${status}`);
+  }
+}
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAWwIYGsCmAxATiGKAZVQBtUATACmH0IEYAuRAZylxjAHMAaRWglABMzNh24BKZgDc4MCogDeAKESJSmKKzKVEAXn50o9RAGpDgoWYuEr5gQ2sPhToyftuA3KsQQELOA0AOlI4LioWHQoJbwBfZWVQSFgERAAHXDgIchhkCKhUKBAWfUQAIjA4LVxMSgBPIMayvhq02q0DegklH2A4XEQqDS0YUoAGT0RRgB5EVvbJ0dNO7pU1NT8wAODQ8IADAEkAcmREABJFNkLi2L2Yn3jYoA)
+
+**Solution:**
+
+```ts
 /**
 * Prints the provided string parameters in the order:
 * first, second, second, first, second, first, first
@@ -250,26 +256,28 @@ function proclaim(status = 'not ready...', repeat = 1) {
 }
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 08 - ARRAYS: Array Type Annotations
 
 The code editor contains several array assignments. Add the appropriate type annotations to the array variables in the // Arrays: section.
 
 ```ts
 // Arrays:
-// let bestNumbers = [7, 77, 4];
-// let bestLunches = ["chicken soup", "non-chicken soup"];
-// let bestBreakfasts = [
-//   "scrambled eggs",
-//   "oatmeal",
-//   "tamago kake gohan",
-//   "any kind of soup",
-// ];
-// let bestBooleans = [true, false];
+let bestNumbers = [7, 77, 4];
+let bestLunches = ["chicken soup", "non-chicken soup"];
+let bestBreakfasts = [
+  "scrambled eggs",
+  "oatmeal",
+  "tamago kake gohan",
+  "any kind of soup",
+];
+let bestBooleans = [true, false];
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/DYUwLgBARiDOYDkCuBbGAnWEC8EDaA7ADQQHEQAsAugNwBQokM8AMkgHYDGAFnDvgCIeAS04BrEOwiwA9kgAOAkgPYz2AWhHjJ0uYtoNw0OGABC6EAEMxAM0vwsuPHQgQBsTuktpQAEwggAOaBsEoubjKWYChWwGGuAmDeloEyEGLWIBCp3Jbs8W55AJ7pwuz+Mja6CmEGjMbwpjIyoHmO+GDoSCAkdsCwILRAA)
+
+**Solution:**
+
+```ts
 // Arrays:
 let bestNumbers: number[] = [7,77,4];
 let bestLunches: string[] = ['chicken soup', 'non-chicken soup'];
@@ -277,38 +285,40 @@ let bestBreakfasts: string[] = ['scrambled eggs', 'oatmeal', 'tamago kake gohan'
 let bestBooleans: boolean[] = [true, false];
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 09 - ARRAYS: Multi-dimensional Arrays
 
 Please provide type annotations for all the arrays provided in the // Multidimensional arrays: section.
 
 ```ts
 // Arrays:
-// let bestNumbers: number[] = [7, 77, 4];
-// let bestLunches: string[] = ["chicken soup", "non-chicken soup"];
-// let bestBreakfasts: string[] = [
-//   "fasting",
-//   "oatmeal",
-//   "tamago kake gohan",
-//   "any kind of soup",
-// ];
-// let bestBooleans: boolean[] = [true, false];
+let bestNumbers: number[] = [7, 77, 4];
+let bestLunches: string[] = ["chicken soup", "non-chicken soup"];
+let bestBreakfasts: string[] = [
+  "fasting",
+  "oatmeal",
+  "tamago kake gohan",
+  "any kind of soup",
+];
+let bestBooleans: boolean[] = [true, false];
 
 // // Multidimensional Arrays:
-// let bestMealPlan = [
-//   bestLunches,
-//   bestBreakfasts,
-//   ["baked potato", "mashed potato"],
-// ];
-// let bestBooleansTwice = [bestBooleans, bestBooleans];
-// let numbersMulti = [
-//   [[1], [2, 3]],
-//   [[7], bestNumbers],
-// ];
+let bestMealPlan = [
+  bestLunches,
+  bestBreakfasts,
+  ["baked potato", "mashed potato"],
+];
+let bestBooleansTwice = [bestBooleans, bestBooleans];
+let numbersMulti = [
+  [[1], [2, 3]],
+  [[7], bestNumbers],
+];
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEEECdIQwTwM4C4BQAbApgF1AIwwlgHICuAtvpMqAHbmUDaAuqALygMDsANKJz6AAsTANzpseAlgAyJGgGMAFgSShCkAJY0A5szYcAREo3yA1hhpqA9iQAOB3gZpWaAWmNmL1uwdHic+IQAQpAYMKYAZjCE1OpauizsDCigoAZRhPEOKWlWMFhkYWjZqQZYMGQw2lagpuEYoNWKMDQlaS1wtVoAJqBWEd723Ch+mAFSQVZWmC3UuFMzNHpJWJAkGLxRaAgYfiggoAcAsiRoWBrdGoU0CBouMGgQ0PDI-pKER0UACmgt+smpQIyORKAjDQETULhDJYBDgwy4eq9WxWcpYKwONKVBDKZGo-IYpjDUYSIGTaZhG4AFQA7iYGkkyQtKXD3lhyYsECScHQKBgqCczhp-jkGAwAIxEjgAJl4AGYmETRVwpUDSHyqErREA)
+
+**Solution:**
+
+```ts
 // Arrays:
 let bestNumbers: number[] = [7,77,4];
 let bestLunches: string[] = ['chicken soup', 'non-chicken soup'];
@@ -328,10 +338,6 @@ let numbersMulti: number[][][] = [
 ];
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 10 - ARRAYS: Tuples
 
 STEP:
@@ -342,8 +348,14 @@ STEP:
 * OK luckily that didn’t work. The whole point of tuples is that they have fixed lengths, so you cannot access elements of favoriteCoordinates with indices greater than 5. Even when you want to!
 
 ```ts
-// let favoriteCoordinates = [40, 43.2, "N", 73, 59.8, "W"];
+let favoriteCoordinates = [40, 43.2, "N", 73, 59.8, "W"];
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/DYUwLgBAZghgbgewE4EswgMIOQExQOxnQGcIBeCAbQBYAGAGgmoGYA6AJkYCIA5LxgOzNGAVgCcrABzcA6lwC6AbiA)
+
+**Solution:**
+
+```ts
 let favoriteCoordinates: [number, number, string, number, number, string] = [
   40,
   43.2,
@@ -357,10 +369,6 @@ favoriteCoordinates = [17, 45, "N", 142, 30, "E"];
 
 favoriteCoordinates[6] = -6.825;
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 11 - ARRAYS: Array Type Inference
 
@@ -379,13 +387,25 @@ let dogTup: [string, string, string, string] = [
 ];
 
 // Your code goes here:
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEBEHsDsHIBdQGMAWBDaBzApqeKBLAZ1AAc0AneALgFgAoAG20QBNJMAVAV1OtADaReBQJYANKGGiJUkWMyTpCgLqgAvIIahQAInaZd47XoBGFSAHdooAGbcKRk7qQPGATzxoCjJ-R26RGisoNju2ER+KgDcDAwgoACakA7IkKy4mJARoCjYFNjUQA)
+
+**Solution:**
+
+```ts
+// Don't change this part:
+let dogTup: [string, string, string, string] = [
+  "dog",
+  "brown fur",
+  "curly tail",
+  "sad eyes",
+];
+
+// Your code goes here:
 let myArr = dogTup.concat(dogTup);
 myArr[50] = "not a dog";
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 12 - ARRAYS: Rest Parameters
 
@@ -395,14 +415,20 @@ STEP:
 * There is no such thing as a number to the power of 'a string'. Verify that the function results in a type error when you add the code addPower('a string', 4, 5, 6) and run tsc.
 
 ```ts
-// function addPower(p, ...numsToAdd) {
-//   let answer = 0;
-//   for (let i = 0; i < numsToAdd.length; i++) {
-//     answer += numsToAdd[i] ** p;
-//   }
-//   return answer;
-// }
+function addPower(p, ...numsToAdd) {
+  let answer = 0;
+  for (let i = 0; i < numsToAdd.length; i++) {
+    answer += numsToAdd[i] ** p;
+  }
+  return answer;
+}
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAQwCaoApwO4FMBOAFAA4A0iAdFWCALYDOAKnAILoCUiA3gLABQiRABtcUFGHp58iALyIADAG5+g4HGmERYmLIWLEOgDyIaDZm1QURYAOZQAFvpgBqZ514DB4yQUTO5pkys6ADaMAC6iABUUYjEyp4AviqI+KIg+EjIElIJiUA)
+
+**Solution:**
+
+```ts
 function addPower(p: number, ...numsToAdd: number[]): number {
   let answer = 0;
   for (let i = 0; i < numsToAdd.length; i++) {
@@ -414,10 +440,6 @@ function addPower(p: number, ...numsToAdd: number[]): number {
 addPower("a string", 4, 5, 6);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 13 - ARRAYS: Spread Syntax
 
 STEP:
@@ -426,28 +448,34 @@ STEP:
 * Perform the whole dance from start to finish by looping over the danceMoves array in whatever way you like, but make sure to use JavaScript’s spread syntax within performDanceMove(). It’s time to see the results of the dance! Run tsc to transpile the code to JavaScript and then run it with node index.js.
 
 ```ts
-// function performDanceMove(
-//   moveName: string,
-//   moveReps: number,
-//   hasFlair: boolean
-// ): void {
-//   console.log(`I do the ${moveName} ${moveReps} times !`);
-//   if (hasFlair) {
-//     console.log("I do it with flair!");
-//   }
-// }
+function performDanceMove(
+  moveName: string,
+  moveReps: number,
+  hasFlair: boolean
+): void {
+  console.log(`I do the ${moveName} ${moveReps} times !`);
+  if (hasFlair) {
+    console.log("I do it with flair!");
+  }
+}
 
-// let danceMoves = [
-//   ["chicken beak", 4, false],
-//   ["wing flap", 4, false],
-//   ["tail feather shake", 4, false],
-//   ["clap", 4, false],
-//   ["chicken beak", 4, true],
-//   ["wing flap", 4, true],
-//   ["tail feather shake", 4, true],
-//   ["clap", 4, true],
-// ];
+let danceMoves = [
+  ["chicken beak", 4, false],
+  ["wing flap", 4, false],
+  ["tail feather shake", 4, false],
+  ["clap", 4, false],
+  ["chicken beak", 4, true],
+  ["wing flap", 4, true],
+  ["tail feather shake", 4, true],
+  ["clap", 4, true],
+];
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABABwKYCdh3QWwCICGkqAsnAG6oAUAsAFCKI4WoByBOqAXIgM5ToYYAOYAaeo2aUASqmS8eYEDgBGGcQ0QALArwBiAGwIx0PFXDgHURegEoe5ODAAmiAN4TEEBL0uoAdAZwwlQABgCSiM5wiFBaqIgAJG5SbByoAL5JKSyy8lmwnLyIAIShtgDcnjDAiFQ6+kYmtu6ejN5gvlaBwVQARJHRiDBQiADuI1qIwE3oJX2Vnhn0y3T0VqPORBCkLMUAvIgA2p5HfRBaMBAA1qhIagTXfaKIACwvwAQGvKgAuhqMM4TETTIzIZ5vD5fH7-U59KDGAzTaxxDB8HS3CHvabQv4A47nMFYqHfPFwi5XW73axPF7YgQgMmaIFCYSggjgukvBlMwHwxHIgio9Dox6oYmxdCM2HMwkciU8mW-CpAA)
+
+**Solution:**
+
+```ts
 function performDanceMove(
   moveName: string,
   moveReps: number,
@@ -473,10 +501,6 @@ let danceMoves: [string, number, boolean][] = [
 danceMoves.forEach((move) => performDanceMove(...move));
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 14 - CUSTOM TYPES: Enums
 
 STEP:
@@ -486,6 +510,22 @@ STEP:
 * The array ordersArray is a list of orders to process, in the format [<pet name string>, <number ordered>]. (Why did someone order 50 chinchillas?) This is clearly not type safe by any stretch of the imagination. Create the type safe version of this array, naming it ordersArrayTS. Pet names should be replaced by corresponding enum values. The number ordered should stay the same. Don’t do the type annotation just yet, we’ll get to that in a moment.
 * Now that you have created ordersArrayTS and assigned its value, go back and add the appropriate type annotation. Note that ordersArrayTS is an array of tuples, so the type annotation should reflect that fact.
 * Now that we have a type safe orders array, let’s see what happens when someone tries to order a pet that the shop does not carry. Attempt to add an order for 3 jerboas by adding the code ordersArrayTS.push([Pet.Jerboa, 3]); and clicking the “Run” button. Then, run tsc in the terminal to make sure TypeScript does not allow this push.
+
+```ts
+let petOnSale = "chinchilla";
+let ordersArray = [
+  ["rat", 2],
+  ["chinchilla", 1],
+  ["hamster", 2],
+  ["chinchilla", 50],
+];
+
+// Write your code below:
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/DYUwLgBADuDyB2BlAhqCBeCAiAxgCwEt58DhhksBuAWAChRIB7AJwBMRmBnAQWeeQCeGCAG06EUVn5gsAGggAmALqzxkksUJkK8gIwq1IrHmQBbTmA5zFB2hKMaS26wFYADLaU1adAPS+IAHVmAksIAUYAV2YIHEZ2CAAjEGBGAHcALiA)
+
+**Solution:**
 
 ```ts
 let petOnSale = "chinchilla";
@@ -517,10 +557,6 @@ const ordersArrayTS: [Pet, number][] = [
 ordersArrayTS.push([Pet.Jerboa, 3]);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 15 - CUSTOM TYPES: String Enums vs. Numeric Enums
 
 STEP:
@@ -529,6 +565,22 @@ STEP:
 * Create the type-safe variable petOnSaleTS and assign to it the value Pet.Chinchilla. Make sure to explicitly include the correct type annotation for petOnSaleTS.
 * As before, ordersArray is a list of orders to process, in the format [<pet name string>, <number ordered>]. This is not type safe. Create the type safe version of this array, naming it ordersArrayTS. Pet names should be replaced by corresponding enum values. The number ordered should stay the same. Include the type annotation for ordersArrayTS as well.
 * As discussed above, string enums are very particular about the form their values are written in. Even though you wrote Hamster = 'HAMSTER' in the enum Pet statement, you cannot use 'HAMSTER' as the enum value. You must use Pet.Hamster instead. Demonstrate this fact by adding the code ordersArrayTS.push(['HAMSTER', 1]); and clicking “Run”. Then, run tsc in the terminal to make sure TypeScript does not allow this.
+
+```ts
+let petOnSale = "chinchilla";
+let ordersArray = [
+  ["rat", 2],
+  ["chinchilla", 1],
+  ["hamster", 2],
+  ["chinchilla", 50],
+];
+
+// Write your code below:
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/DYUwLgBADuDyB2BlAhqCBeCAiAxgCwEt58DhhksBuAWAChRIB7AJwBMRmBnAQWeeQCeGCAG06EUVn5gsAGggAmALqzxkksUJkK8gIwq1IrHmQBbTmA5zFB2hKMaS26wFYADLaU1adAPS+IAHVmAksIAUYAV2YIHEZ2CAAjEGBGAHcALiA)
+
+**Solution:**
 
 ```ts
 let petOnSale = "chinchilla";
@@ -559,10 +611,6 @@ const ordersArrayTS: [Pet, number][] = [
 ordersArrayTS.push(["HAMSTER", 1]);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 16 - CUSTOM TYPES: Object Types
 
 STEP:
@@ -571,30 +619,36 @@ STEP:
 * The code editor defines the variable birthdayBabies without a type annotation. Please add in the correct type annotation yourself.
 
 ```ts
-// function sayHappyBirthdayWithObject(personObject){
-//   let output ='';
-//   output += 'Happy Birthday '
-//          + personObject.name + '! ';
-//   output += 'You are now ' 
-//          + personObject.age + ' years old! ';
-//   output += 'Your birthday wish was to receive ' 
-//          + personObject.giftWish 
-//          + '. And guess what? You will ';
-//   if (!personObject.success){
-//     output += 'not ';
-//   }
-//   output += 'receive it! \n';
-//   console.log(output);
-// }
+function sayHappyBirthdayWithObject(personObject){
+  let output ='';
+  output += 'Happy Birthday '
+         + personObject.name + '! ';
+  output += 'You are now ' 
+         + personObject.age + ' years old! ';
+  output += 'Your birthday wish was to receive ' 
+         + personObject.giftWish 
+         + '. And guess what? You will ';
+  if (!personObject.success){
+    output += 'not ';
+  }
+  output += 'receive it! \n';
+  console.log(output);
+}
 
-// let birthdayBabies = [
-//   {name: 'Liam', age: 0, giftWish: 'karate skills', success: false}, 
-//   {name: 'Olivia', age: 0, giftWish: 'a bright future', success:true}, 
-//   {name: 'Ava', age: 0, giftWish: '$0.25', success:true}
-// ]; 
+let birthdayBabies = [
+  {name: 'Liam', age: 0, giftWish: 'karate skills', success: false}, 
+  {name: 'Olivia', age: 0, giftWish: 'a bright future', success:true}, 
+  {name: 'Ava', age: 0, giftWish: '$0.25', success:true}
+]; 
 
-// birthdayBabies.forEach(sayHappyBirthdayWithObject);
+birthdayBabies.forEach(sayHappyBirthdayWithObject);
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAZwIYE8ASqAOP0BCMATlABYAmGA6jOQPIBGAVgKbQAUOrxyCTbaAEoA3gFgAUIkQAbVlERwQUHMsQBeAOSaA3JOlKVagNTrEm7HnSIipShnP7pz58cTde-FuygA6MKgAtqyIbpoAhOZ6UorKqgqm5gCaSoioxCFgcADu5ohOLq7uPHxgAj6+qADmIWGI6KzpyIoyFJG6TobxoWaaKSDEiIwk5FTW2TDIZIjZqM1QcIgZEKwwAG4hmvkxhdJuHqXl0L5VMMBQtFPbu0WavogAgmAUiFUgrMjN2WSoUAD8iH6MxgMhkUScZ0QHHCBy8gj8yBAEBWn1EBViRgSvSyCg6MQAvp04iZestVhtEHRIgAdMB46QQBB8OS+GRwKocLrKITRQkSSRyBTDOxjAioYYfDSIADaThEAWCAC5zAAZGBBTQAGjSNWVAAZtadzpcyMrNABrdK-ELIc0gmTILUoJEo5DK4CoB2sfHauUK1hm+gydbqp3VAOIA2vM4XSam8yoIbEGBVMgKUBQAasJ2I5EfN1QYjvH3XRDyoIRzQPNaoMO6yOGmMms0AEj1vgATABWHMu-OKwvFyQAXR020kwtGGDFEuQvmAcGIAFFUBAyBw0FhcPhbFP0LQGN5hDogA)
+
+**Solution:**
+
+```ts
 function sayHappyBirthdayWithObject(personObject: {
   name: string;
   age: number;
@@ -629,10 +683,6 @@ let birthdayBabies: {
 birthdayBabies.forEach(sayHappyBirthdayWithObject);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 17 - CUSTOM TYPES: Type Aliases
 
 STEP:
@@ -642,15 +692,22 @@ STEP:
 
 ```ts
 // Add your type alias below:
+
+let codecademyCoordinates = [40, 43.2, "N", 73, 59.8, "W"];
+let bermudaTCoordinates = [25, 0, "N", 71, 0, "W"];
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEEEBNNBPB7ArgJ1AF1gBwKagIYA2AlngM6gBG2B8A7gFwCwAUCwdmqAMbyTZd4+AW1gBhePGSQiAOzxps5ALygA2gBYADABpQ6gMwA6AEy6ARADkzugOz7dAVgCchgBzmA6mYC6AbjYclNjIQoiQeAAq4pLScgrKasYOujqgltagNgCMKZ4+vkA)
+
+**Solution:**
+
+```ts
+// Add your type alias below:
 type Coord = [number, number, string, number, number, string];
 
 let codecademyCoordinates: Coord = [40, 43.2, "N", 73, 59.8, "W"];
 let bermudaTCoordinates: Coord = [25, 0, "N", 71, 0, "W"];
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 18 - CUSTOM TYPES: Function Types
 
@@ -663,50 +720,54 @@ STEP:
 
 ```ts
 // Math Operations
-// function add(a, b) {
-//   return a + b;
-// }
-// function subtract(a, b) {
-//   return a - b;
-// }
-// function multiply(a, b) {
-//   return a * b;
-// }
-// function divide(a, b) {
-//   return a / b;
-// }
-// function wrongAdd(a, b) {
-//   return a + b + "";
-// }
+function add(a, b) {
+  return a + b;
+}
+function subtract(a, b) {
+  return a - b;
+}
+function multiply(a, b) {
+  return a * b;
+}
+function divide(a, b) {
+  return a / b;
+}
+function wrongAdd(a, b) {
+  return a + b + "";
+}
 
 // Add your function type below:
 
 // Math Tutor Function That Accepts a Callback
-// function mathTutor(operationCallback) {
-//   console.log("Let's learn how to", operationCallback.name, "!");
-//   let value25 = operationCallback(2, 5);
-//   console.log(
-//     "When we",
-//     operationCallback.name,
-//     "2 and 5, we get",
-//     value25,
-//     "."
-//   );
-//   console.log(
-//     "When we",
-//     operationCallback.name,
-//     value25,
-//     "and 7, we get",
-//     operationCallback(value25, 7),
-//     "."
-//   );
-//   console.log("Now fill out this worksheet.");
-// }
+function mathTutor(operationCallback) {
+  console.log("Let's learn how to", operationCallback.name, "!");
+  let value25 = operationCallback(2, 5);
+  console.log(
+    "When we",
+    operationCallback.name,
+    "2 and 5, we get",
+    value25,
+    "."
+  );
+  console.log(
+    "When we",
+    operationCallback.name,
+    value25,
+    "and 7, we get",
+    operationCallback(value25, 7),
+    "."
+  );
+  console.log("Now fill out this worksheet.");
+}
 
 // Call your functions below:
+```
 
-// ---
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEFkEMBcAtQPIAcCmAnGBLA9gOwM4CwAUAGYCuuAxtDrqJACaMAUkANKAEYCUoA3iVCg0KaOTT1IoANTcA3CQC+JCtVp5Q+cl2gYabTrwFCRYiVNABaBctWUadUAFtyAG1pI3AT0Pc+gsTCouKSDKAAVLbEKmQOGvSMmABumIwofsaBweZh0mBcijH26k4A7mh4AOYAgsyZAaYhFuFyXLKgAESdRbEkIKB1jKDe2BKgao6a0N6o3Chu2GUAXCT9YFBwoAAq5NDYaKAAYvFO27Awg1RUKEjQ+OEAwpBublyQVADWJVP0zjCwXb7NAsbCoDAJZ6vd5fRpBUBUPD4bBuFAAOkWVRYnQAMmIAOQPVGQMKwJagfadThg9BYPBQt4fT5o3CQZwoTidACEnR4RWEqOgoGSL3IKAATABWUAAXlANIhdAZMM+LHFnElfNMiIIKPRmJYpmEnQA6rAUPQyigqUb5eC6bhlUyWWyObbOuKGLhhpLOFbQFUxDb4cIRW4xVL2O60Z1TFr4TrkaiMdgse6zRbQFbg8JhAqHU6vi72VGQ8LRRLfe7IN7QAB2P0oANB0u5u20yEvRlfFhhiO++s8Vu5zoxuP8hFIvUprGdABy5NImFe8r2FNgmAeZQOn3w5rEMfjfWIAwZIzGh0mCQeXAWS2WQA)
 
+**Solution:**
+
+```ts
 // Math Operations
 function add(a, b) {
   return a + b;
@@ -752,11 +813,7 @@ function mathTutor(operationCallback: OperatorFunction) {
 // Call your functions below:
 mathTutor(wrongAdd);
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
+<!-- TODO: Same exercises as 20 -->
 ## 19 - CUSTOM TYPES: Generic Types
 
 Please provide type annotations for the variables theFamily, someFamily, aFamily, and anotherFamily in the code editor. Where appropriate, use the predefined type aliases Human, Dog, and the generic type Family<T>.
@@ -810,6 +867,23 @@ let personArray: { name: string; age: number }[];
 let coordinateArray: [number, number][];
 
 // Write your code below:
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABAcwKZQGIwDbdQEwEEAnYgQwE8AeAFQD4AKANzOxFQC5EaAaRMLmBABbAEapiASi40A2gF1EAbwCwAKESJi6EMSQlyFBmEkA6YDmzNW7SQG51AX3Xq8URAGcoxGGGQHKLi8fPwUHNTd+EXFiAIpBaIkw13REAAcJDwQ4riV+MmFOT29fZDtEMjQEsQlER2SI1Ig4OGJ8XzIoVBzEWSEa4j5+mPkG9QB6ccQAdR8uxAo4XURm-FREcWw4AHcOIA)
+
+**Solution:**
+
+```ts
+function getFilledArray<T>(value: T, n: number): T[] {
+  return Array(n).fill(value);
+}
+
+let stringArray: string[];
+let numberArray: number[];
+let personArray: { name: string; age: number }[];
+let coordinateArray: [number, number][];
+
+// Write your code below:
 stringArray = getFilledArray<string>("hi", 6);
 numberArray = getFilledArray<number>(9, 6);
 personArray = getFilledArray<{ name: string; age: number }>(
@@ -818,10 +892,6 @@ personArray = getFilledArray<{ name: string; age: number }>(
 );
 coordinateArray = getFilledArray<[number, number]>([3, 4], 6);
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 21 - UNION TYPES: Defining Unions
 
@@ -833,12 +903,18 @@ STEP
 * Run node index.js to execute your compiled code. You should see the custom log messages from the printNumsAndStrings() function as the output.
 
 ```ts
-// function printNumsAndStrings(statement) {
-//   console.log(`ℹ️ LOG:: ${statement}`);
-// }
+function printNumsAndStrings(statement) {
+  console.log(`ℹ️ LOG:: ${statement}`);
+}
 
-// printNumsAndStrings("hello!");
+printNumsAndStrings("hello!");
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABABwE4zFAciAtgZwEEwATAZSnTAHN8AKfKAQygFNdXMBKRAbwFgAUIkQQE+OABtWAOklxqdAAaBOQkDwf4gAyAeQDiALn2IAJL0Yt2nKAF8lXANxDrQoWgzY8RUhSq06AIgALVkl5AEJ-ByA)
+
+**Solution:**
+
+```ts
 function printNumsAndStrings(statement: string | number) {
   console.log(`ℹ️ LOG:: ${statement}`);
 }
@@ -846,10 +922,6 @@ function printNumsAndStrings(statement: string | number) {
 printNumsAndStrings("hello!");
 printNumsAndStrings(3);
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 22 - UNION TYPES: Type Narrowing
 
@@ -859,13 +931,19 @@ STEP
 * Inside the body of formatValue(), write another type guard that checks if value is a 'number'. If it is, then console.log() the number with two zeros after the decimal with .toFixed(2).
 
 ```ts
-// function formatValue(value: string | number) {
+function formatValue(value: string | number) {
 // Write your code here
-// }
+}
 
-// formatValue("Hiya");
-// formatValue(42);
+formatValue("Hiya");
+formatValue(42);
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABMOAnAtgQygNUwGxAFMAKANwOIC5EBnKVGMAc0QB9EwR0AjI1AJSIA3gFgAUAHpJiAOqMoRRAE84IVIghwAJkoAW-IhIC+EiSgzY8hUgCIAEjGWZbAgNzm0WXJVIAWACZ3IA)
+
+**Solution:**
+
+```ts
 function formatValue(value: string | number) {
   // Write your code here
   if (typeof value === "string") {
@@ -880,10 +958,6 @@ formatValue("Hiya");
 formatValue(42);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 23 - UNION TYPES: Inferred Union Return Types
 
 In the editor, we have a User type that describes a user. In addition, there’s a function named createUser() that randomly returns a user or an error message (we’re simulating a call to a server that might fail). We’d like to call the createUser() function, then store its response in a typed variable.
@@ -891,21 +965,27 @@ In the editor, we have a User type that describes a user. In addition, there’s
 Declare a variable named userData that stores the returned value of createUser(). Then, go back and provide userData with the correct union type.
 
 ```ts
-// type User = {
-//   id: number;
-//   username: string;
-// };
+type User = {
+  id: number;
+  username: string;
+};
 
-// function createUser() {
-//   const randomChance = Math.random() >= 0.5;
+function createUser() {
+  const randomChance = Math.random() >= 0.5;
 
-//   if (randomChance) {
-//     return { id: 1, username: "nikko" };
-//   } else {
-//     return "Could not create a user.";
-//   }
-// }
+  if (randomChance) {
+    return { id: 1, username: "nikko" };
+  } else {
+    return "Could not create a user.";
+  }
+}
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/C4TwDgpgBAqgzhATlAvFA3gWAFBSgSwBMAuKAOwFcBbAIyQG4c8KFEyBDKiUuYRfMgHNG2AL4icAMwpkAxsHwB7MlFmII7YBHhIAFAEoMTVct5RE7MoUVUAwgAtLs6GgCym+wDoLVmwagAfGgADJ4ArBK4BJJQuj7Wdo5yEIZYUXjqwBRsGAQkUACMADRQLEgcXKQARGT4ANZ1ilVQ4saiUBAANghG6eYQWTlVtooUnYTkisCq6prQ7KWsnlUieKI4okA)
+
+**Solution:**
+
+```ts
 type User = {
   id: number;
   username: string;
@@ -924,10 +1004,6 @@ function createUser() {
 let userData: User | string = createUser();
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 24 - UNION TYPES: Unions and Arrays
 
 Inspect the program in the editor. This program has a function that takes home addresses and their respective prices, formats them, then returns them. If you hover over the listings parameter in formatListings(), the type of listings is inferred as any. Let’s type this parameter.
@@ -935,27 +1011,33 @@ Inspect the program in the editor. This program has a function that takes home a
 Look at the definition of formatListings(), then define a union array type on the listings parameter.
 
 ```ts
-// function formatListings(listings) {
-//   return listings.map((listing) => {
-//     if (typeof listing === "string") {
-//       return listing.toUpperCase();
-//     }
+function formatListings(listings) {
+  return listings.map((listing) => {
+    if (typeof listing === "string") {
+      return listing.toUpperCase();
+    }
 
-//     if (typeof listing === "number") {
-//       return `$${listing.toLocaleString()}`;
-//     }
-//   });
-// }
+    if (typeof listing === "number") {
+      return `$${listing.toLocaleString()}`;
+    }
+  });
+}
 
-// const result = formatListings([
-//   "123 Main St",
-//   226800,
-//   "580 Broadway Apt 4a",
-//   337900,
-// ]);
+const result = formatListings([
+  "123 Main St",
+  226800,
+  "580 Broadway Apt 4a",
+  337900,
+]);
 
-// console.log(result);
+console.log(result);
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABMOAnAtgQygGRgZ1jAHN8AKAGwKNIEpEBvAWAChFFUBTKEVJKwjBL4AdFgAOZStSHF6AXgB8jVu3YxgiMlACe4znE0CaieWcQAiQqlkX6zNmvZcefRMdkiocAKrj9qADCmPicZLQA3KpqAL6s0eqa2noGRjIkpuYWYCDoAEacqHYqjk4uvEgABgAk1QweJF5wOHAQmBScAMpQNiThMZVRpYhxjjGRrKOsEAiEHJz4IBRQpshoWLjppGQA2tEWAIwATADMiACymEKI3RYANNFHRwBsABwADO8PjhYArB+IABCqDgmAAJgB3TA6RAAQXEKwALJh7tETicAOwATk+3wAuhMWNNZnAOiIKHBiGQuItlpEgA)
+
+**Solution:**
+
+```ts
 function formatListings(listings: (string | number)[]) {
   return listings.map((listing) => {
     if (typeof listing === "string") {
@@ -978,10 +1060,6 @@ const result = formatListings([
 console.log(result);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 25 - UNION TYPES: Common Key Value Pairs
 
 In the editor, we’ve written a program that should display a message about a social media event. The getFriendNameFromEvent() function takes an event, then returns the friend’s displayName or username. Let’s start by adding a type to the getFriendNameFromEvent()’s event parameter. Use a union to allow event to be a Like or a Share, then save your code.
@@ -994,28 +1072,34 @@ Property 'displayName' does not exist on type 'Share'.(2339)
 This message is pointing out that there’s no displayName property on the Share type. In the Share type, add a displayName of type string, just like on the Like type.
 
 ```ts
-// type Like = {
-//   username: string;
-//   displayName: string;
-// };
+type Like = {
+  username: string;
+  displayName: string;
+};
 
-// type Share = {
-//   username: string;
-// };
+type Share = {
+  username: string;
+};
 
-// function getFriendNameFromEvent(event) {
-//   return event.displayName || event.username;
-// }
+function getFriendNameFromEvent(event) {
+  return event.displayName || event.username;
+}
 
-// const newEvent = {
-//   username: "vkrauss",
-//   displayName: "Veronica Krauss",
-// };
+const newEvent = {
+  username: "vkrauss",
+  displayName: "Veronica Krauss",
+};
 
-// const friendName = getFriendNameFromEvent(newEvent);
+const friendName = getFriendNameFromEvent(newEvent);
 
-// console.log(`You have an update from ${friendName}.`);
+console.log(`You have an update from ${friendName}.`);
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/C4TwDgpgBAMglga2gXigbwLACgpQK4DOEATgHYCGAthAFxQHDFykDmA3NrgCZwFgA25EADkqteo2btsAXw5ZsoSFADKAC3LEU6TviJkxdBk1by52bADM8pAMbA4Ae1JQWEYADEmEUl1HUvR0oAUQA3H2AACghw0mAASh0cKC1gPDIoGIiAOh4+QRExKAAfYszY4GzCEgpqMwssW2cGKFIIAHcwiKhUTGTqg2o6ACJQhGJyQgJhgBpdPIEhf3FhgDUSZzhbcigAaQmp2dl5bCbSFstvX2We13cvOB8-MUCQisi2zor4k8bmx34EGy-EcLEiAAMAJqOPBQDThKDkFx4MBccjAaCXIJQAAkaEuj2uYhk2XBPyAA)
+
+**Solution:**
+
+```ts
 type Like = {
   username: string;
   displayName: string;
@@ -1039,10 +1123,6 @@ const friendName = getFriendNameFromEvent(newEvent);
 
 console.log(`You have an update from ${friendName}.`);
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 26 - UNION TYPES: Unions with Literal Types
 
@@ -1100,6 +1180,20 @@ STEP:
 
 ```ts
 function formatStatistic(stat: string | number) {
+  // Write your code below:
+  return stat.toFixed(2);
+}
+
+console.log(formatStatistic("Win"));
+console.log(formatStatistic(0.364));
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/GYVwdgxgLglg9mABMOAnAtgQygZStmAZ1ggApjsAuRY1GMAc0QB9EwR0AjAU1QEpEAbwCwAKESIA9JMQB1OlG6IAnnBCpEEOABMlPADZwA7pTETU3KOqQUoAOihwAYjAAe3baQBMfANxiAXzExLTBCOH1uO0MGUhQMbDwCYhgyACJZejS+PxCEcMjouFj4rFx8WBSyAAY7AGYANgAWHN8gA)
+
+**Solution:**
+
+```ts
+function formatStatistic(stat: string | number) {
   if (typeof stat === "number") {
     return stat.toFixed(2);
   }
@@ -1108,13 +1202,9 @@ function formatStatistic(stat: string | number) {
   }
 }
 
-console.log(formatStatistic("WIN"));
-console.log(formatStatistic(0.36));
+console.log(formatStatistic("Win"));
+console.log(formatStatistic(0.364));
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 28 - TYPE NARROWING: Using in with Type Guards
 
@@ -1124,6 +1214,38 @@ STEP:
 * The previous checkpoint takes care of Cat types. Now let’s handle Fish types. Write another type guard using the in operator inside the body of the move() function. This type guard should check if the property 'swim' exists on pet. If it does, then return pet.swim().
 * Run tsc in the terminal to compile your code. There should be no errors, even though methods we called on pet do not exist on both Cat and Fish types, since TypeScript was able to type narrow.
 * Run your compiled code with node index.js. You should see pitter pat as the output if you called move() with siameseCat or bubble blub if you called move() with bettaFish.
+
+```ts
+type Cat = {
+  name: string;
+  run: () => string;
+};
+
+type Fish = {
+  name: string;
+  swim: () => string;
+};
+
+const siameseCat = {
+  name: "Proxie",
+  run: () => "pitter pat",
+};
+
+const bettaFish = {
+  name: "Neptune",
+  swim: () => "bubble blub",
+};
+
+function move(pet: Cat | Fish) {
+  return pet.run();
+}
+
+console.log(move(siameseCat));
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/C4TwDgpgBAwghsKBeKBvAsAKClAdnAWwgC4oBnYAJwEtcBzAbix0oFddSAKASmQD5yVWoywBfJpiyhIUAGLUyAC2RpmeQiUE16EnGQDu1Al15IBFbSMzisWAMYB7XBXLUNZCPEQoM2dUVIAIgAFSgcAD2oIQIAaNTYOKB5+KECwamBgCEooMARYsQl7JxcAIwhMuHklFV8cfADUgDkIMGB2aLi-AyMTFMDS1lLSgBtoUaGC6yLMADN2O2BqJygCBwA3CE5IYFIvKAAfOQVFXjqoSgrWSlxcioA6BJ4JUVtMR2cHMfuRhzpONabThkNxEDxebjcBhAA)
+
+**Solution:**
 
 ```ts
 type Cat = {
@@ -1159,16 +1281,44 @@ function move(pet: Cat | Fish) {
 console.log(move(siameseCat));
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 29 - TYPE NARROWING: Narrowing with else
 
 STEP:
 
 * In the code editor, there’s a function named prepareEntree() that takes an argument named entree. This function should provide instructions on how to prepare two kinds of dishes, either Meat or Pasta entrees (for the particularly famished, we could prepare both). Currently our code is calling .boil() on every entree. This method call is an issue because entrees of type Meat do not have a .boil() method and TypeScript will complain. In the body of the prepareEntree() function, write a type guard using the in operator. Check if the 'boil' property exists on the entree variable. If it does, then return the value of entree.boil(), since that entree must be of type Pasta.
 * Now we’d like to perform separate logic for an entree of type Meat, like steak. Instead of writing another separate type guard, add an else statement to the if conditional you wrote in the last step. Inside the else block, return the result of entree.panFry().
+
+```ts
+type Pasta = {
+  menuName: string;
+  boil: () => string;
+};
+
+type Meat = {
+  menuName: string;
+  panFry: () => string;
+};
+
+const fettuccine = {
+  menuName: "Fettuccine",
+  boil: () => "Heat water to 212 degrees",
+};
+
+const steak = {
+  menuName: "New York Strip Steak",
+  panFry: () => "Heat oil to 350 degrees",
+};
+
+function prepareEntree(entree: Pasta | Meat) {
+  return entree.boil();
+}
+
+console.log(prepareEntree(fettuccine));
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/C4TwDgpgBACghgZ2HKBeKBvAsAKClAWwgDsBXAOTiIC4okAnAS2IHMBuXfAIwHtGAbWgAoAlGgB8dYE1YccAXzm5QkKAFkIcYGkydCJClQi0GzdnrBxiAMXohhY1JNOzci3LgDGPYkigAzCGBgUk9PZmh0bDx9MkoaKAAiayCQsIjEgBo9XgEHCSSACU1tAHctCHooYB4oACYARjqoABMIFnoICAQstyUcb19tJE0Aax1o-CI4o1pE8ghSqABNHnpxgGVpRjAoLbHemMsbO3ynIpKoPn5q2oBmAFYABlb2zu7D9xxcf1JiT2AjB8UDAnUsnQAosRpF0hCQYcZYIhkFAAD7qEpiSZQTohejEKDw94AOly-FEcnkHgGPgQPH4EGJ-B4LCEoIg4IgUIRQkCwVC4WIEBEIjYQA)
+
+**Solution:**
 
 ```ts
 type Pasta = {
@@ -1202,10 +1352,6 @@ function prepareEntree(entree: Pasta | Meat) {
 console.log(prepareEntree(fettuccine));
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 30 - TYPE NARROWING: Narrowing After a Type Guard
 
 In the editor, we’ve created a program that recycles variables of type Metal and Glass. The goal of the program is to sort out the trash of type Metal before the trash of type Glass.
@@ -1213,6 +1359,36 @@ In the editor, we’ve created a program that recycles variables of type Metal a
 Right now, the recycle() function calls the .melt() method on each piece of trash. Let’s give the recycle() function the ability to sort out pieces of trash of type Metal.
 
 In the body of the recycle() function, write a type guard that checks if there is a .magnetize() method on the trash parameter. If there is, then return trash.magnetize(). Your type guard should appear above the trash.melt() call.
+
+```ts
+type Metal = {
+  magnetize: () => string;
+};
+
+type Glass = {
+  melt: () => string;
+};
+
+const iron = {
+  magnetize: () => "Electromagnet activated",
+};
+
+const bottle = {
+  melt: () => "Furnace set to 2,700 degrees",
+};
+
+function recycle(trash: Metal | Glass) {
+  // Add your code below:
+
+  return trash.melt();
+}
+
+console.log(recycle(iron));
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/C4TwDgpgBAshwEMA2UC8UDeBYAUFKAtggOYB28AlgF4QBcUAFAJRoB8UAzsAE4WnEBuXAF8hOXKEhQA4kgQcOaTLnwEISYPWZtOPPoJFjcAYwD2pLlArdzS7HkIlywanUYtU7AEQBRJBGMeUyIyeCgEQIoANwRgCAATLwAaQ1wTc0sAI1NgYH87FUJ1TXcdLwAxAFduUgjoDjDgUygAJiSAdgAGTqh4iGJuCAgOZNTxHAAzStJI20HjEGN-Bh55AAt6OEQUAB8ZOQUWe3wAehOoAEF4+KgQU2qoMz6oTPVTAHdaQsLB4GrSKCrDhrAB0ag0zDEwjSODMFlM-hBSFMxAY80Wy2s5iYTAEQA)
+
+**Solution:**
 
 ```ts
 type Metal = {
@@ -1243,10 +1419,6 @@ function recycle(trash: Metal | Glass) {
 console.log(recycle(iron));
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 31 - ADVANCED OBJECT TYPES: Interfaces and Types
 
 STEP: 
@@ -1255,6 +1427,25 @@ STEP:
 * Apply the Run interface to the run parameter.
 * In the terminal run tsc to compile your code.
 * Finally, run node index.js in the terminal to see the output. You should see some stats about a monthly running goal.
+
+```ts
+// Write an interface here
+
+function updateRunGoal(run) {
+  console.log(`
+Miles left:       ${50 - run.miles}
+Percent of goal:  ${(run.miles / 50) * 100}% complete
+  `);
+}
+
+updateRunGoal({
+  miles: 5,
+});
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEHUCcEsBcFNQEMB2pooZAZkgxogBbyTwCwAUJdgK4p6zQD2aNADgCZIIBKdA4kyQAbABSQ6ASlABvSqFB4WAZybD4AOmFMA5qIAGlALLR1y0OuywAXArsKAJDICsABlABaUBJQaAtqbwygC+lAAKJASYoEzYoDpCwragTuJ0-oHmYG7SAFSgAIyursEApIpMfmzqCPKg+pIA3JShVBTsXLwCiaJyFAoBZrbOADQtTUA)
+
+**Solution:**
 
 ```ts
 // Write an interface here
@@ -1274,10 +1465,6 @@ updateRunGoal({
 });
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 32 - ADVANCED OBJECT TYPES: Interfaces and Classes
 
 STEP: 
@@ -1286,6 +1473,29 @@ STEP:
 * Using the implements keyword, apply Directory to the DesktopDirectory class.
 * In the terminal run tsc to compile your code.
 * Run node index.js in the terminal to see the output. You should see the output from our operating system program about adding and previewing files.
+
+```ts
+// Write an interface here
+
+class DesktopDirectory {
+  addFile(name: string) {
+    console.log(`Adding file: ${name}`);
+  }
+
+  showPreview(name: string) {
+    console.log(`Opening preview of file: ${name}`);
+  }
+}
+
+const Desktop = new DesktopDirectory();
+
+Desktop.addFile("lesson-notes.txt");
+Desktop.showPreview("lesson-notes.txt");
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEHUCcEsBcFNQEMB2pooZAZkgxogBbyTwCwAUJXgDZIDO9oAIvPQNawD2ADs9KTzdIAT1ABvSqGQATGQDFoNeAAoUSALbwAXKHqwYKAOYBKCVOmg8XFPS7KAdDS5GVAAwCCcjEdDYlOqAAJOLqWgC+biYA3BbhlBb0hFwA7gAKpABu0PApapqB+oam5hSWVjZ2js6ubgDyPPAoPqA8WTkpoFzYfgG6IWHwkTFxlPFUFNa2sCxsnLygALygKLmzHNx8AvBCXKIqIxOsG7wOSHKKyioARMqMNgC0KFwI9A6wAB6w14fH8zwOJKpDLwbK5G53OwoJ4vNjvL4-aJAA)
+
+**Solution:**
 
 ```ts
 // Write an interface here
@@ -1309,10 +1519,6 @@ Desktop.addFile("lesson-notes.txt");
 Desktop.showPreview("lesson-notes.txt");
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 33 - ADVANCED OBJECT TYPES: Deep Types
 
 STEP: 
@@ -1320,6 +1526,32 @@ STEP:
 * In the code editor, we’re going to continue working on our operating system. This time, we added a config property to the DesktopDirectory class. The data in config will be needed for every Directory, so let’s add it to the Directory interface. Inside the Directory interface, add a config type member that matches the config property of DesktopDirectory. You should write a type that has a nested default object.
 * In the terminal run tsc to compile your code.
 * Run node index.js in the terminal to see the output. You should see output about the configuration of DesktopDirectory.
+
+```ts
+interface Directory {
+  addFile: (name: string) => void;
+  // Define a config type member here
+}
+
+class DesktopDirectory implements Directory {
+
+  addFile(name: string) {
+    console.log(`Adding file: ${name}`);
+  }
+
+  showPreview(name: string) {
+    console.log(`Opening preview of file: ${name}`);
+  }
+}
+
+const Desktop = new DesktopDirectory();
+
+console.log(Desktop.config);
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/JYOwLgpgTgZghgYwgAgCLChBYD2UCeyA3gLABQyycAJtQGLAA2EAXMgBQhwC2ryAzmCigA5gEpkAXgB8yAG45g1ANzlKAenVoIMUCjjIEOELpHIw+AA4pe3AEbRkAC2gRyAX3LkEjOP37a-ADWuJbomNh4hMDclsy84AHhWLgExF4UVLQMzJw8fILCIOLpmZRGIPw4zAB0jDgi7AAGAIK0osi6zGwAJERcvO5NYqqZnmRqAk44AO4ACphywBAzebxshaISpGWGxlW19Y1NAPLWIB2Wi8szyDgwnUx8fQMQQyOT4+Pe+2CBIThLFJkCAVv9QslIgR2B8JmQKgcIHUGuxUBBgqEahVTCMgA)
+
+**Solution:**
 
 ```ts
 interface Directory {
@@ -1355,10 +1587,6 @@ const Desktop = new DesktopDirectory();
 console.log(Desktop.config);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 34 - ADVANCED OBJECT TYPES: Deep Types
 
 STEP: 
@@ -1370,37 +1598,43 @@ STEP:
 * Run node index.js in the terminal. You should see the same output that you saw in the last exercise.
 
 ```ts
-// interface Directory {
-//   addFile: (name: string) => void;
-//   config: {
-//     default: {
-//       encoding: string;
-//       permissions: string;
-//     };
-//   };
-// }
+interface Directory {
+  addFile: (name: string) => void;
+  config: {
+    default: {
+      encoding: string;
+      permissions: string;
+    };
+  };
+}
 
-// class DesktopDirectory implements Directory {
-//   config = {
-//     default: {
-//       encoding: "utf-8",
-//       permissions: "drw-rw-rw-",
-//     },
-//   };
+class DesktopDirectory implements Directory {
+  config = {
+    default: {
+      encoding: "utf-8",
+      permissions: "drw-rw-rw-",
+    },
+  };
 
-//   addFile(name: string) {
-//     console.log(`Adding file: ${name}`);
-//   }
+  addFile(name: string) {
+    console.log(`Adding file: ${name}`);
+  }
 
-//   showPreview(name: string) {
-//     console.log(`Opening preview of file: ${name}`);
-//   }
-// }
+  showPreview(name: string) {
+    console.log(`Opening preview of file: ${name}`);
+  }
+}
 
-// const Desktop = new DesktopDirectory();
+const Desktop = new DesktopDirectory();
 
-// console.log(Desktop.config);
+console.log(Desktop.config);
+```
 
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/JYOwLgpgTgZghgYwgAgCLChBYD2UCeyA3gLABQyycAJtQGLAA2EAXMgBQhwC2ryAzmCigA5gEpkAXgB8yAG45g1ANzlKCHCBjARbUhUrJqEeAFdGYPWsOUIIDdVFtBwkCNUGbAB2jdg-fmBNfmchUQ8bAF8I5GjySPJyBEY4ALQIfgBrXC90TGw8QmBuL2ZecH40DCxcAmJrDS0dKXrPIxM4c0tWm1t7HEc3NgAiUzAYAFoADmGAGmtvX39A4JHqKAB3Cc3trbmF2PmDOLJrGnomCE4ePhdRCX0bRv4cZgA6RhwRdgADAEFaKJkNpmGwACRELi8SI-MQxBKnAz8AAWOA2AAVMHJgBANtdeKFXOIeoZnq8IB8vr8API+EBArxYnEbZA4GDAy7gyE3GFw6wIhFJYJgdJZHItEC40XZHC5aoFAjsPmIsnvT7fVAZGVeN6NbTiZRAA)
+
+**Solution:**
+
+```ts
 interface Directory {
   addFile: (name: string) => void;
   config: Config;
@@ -1437,10 +1671,6 @@ const Desktop = new DesktopDirectory();
 console.log(Desktop.config);
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
-
 ## 35 - ADVANCED OBJECT TYPES: Extending Interfaces
 
 STEP: 
@@ -1449,6 +1679,26 @@ STEP:
 * Add the members from Human to the Developer interface using the extends keyword.
 * Let’s see if the extends implementation worked. In the terminal run tsc to compile your code.
 * Run node index.js in the terminal to see the output. The output should show the result of the code() method.
+
+```ts
+// Write your interface here:
+
+interface Developer {
+  code: () => void;
+}
+
+const me: Developer = {
+  code: () => console.log("Headphones on. Coffee brewed. Editor open."),
+  name: "Corrina",
+  hobbies: ["Building rockets"],
+};
+
+me.code();
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEHUCcEsBcFNQE8D2BXSpoDsGQGYCGAxogBbyTwBcAsAFAM55GmgAi8AbvADYoAHSqADeDUKGIoAJjVAAKAJSgAvAD5QXFNGkBuBgF8GDKdgDOsUAFs5nHvyGYVo8ZJlylqjabMpe8ADp+AHN5ACIACXhCaQEyFGx4M1AEgNAAYRR8fHhEACMqAHd4aTSAUWk4FExBeGwAsMUAGldsQhtqUDDMyBg2sJb6CXi8vOgkzoBtMIAhNGheSuxg0EgUYgBreFgzMIBdQYN9RnobAKlZJV0gA)
+
+**Solution:**
 
 ```ts
 interface Human {
@@ -1468,10 +1718,6 @@ const me: Developer = {
 
 me.code();
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 36 - ADVANCED OBJECT TYPES: Index Signatures
 
@@ -1496,7 +1742,24 @@ Apply the Budget interface to the result variable inside the getBudget() functio
 In the terminal run tsc to compile your code.
 
 Now run node index.js in the terminal. You should see this month’s budget as the output.
-  
+
+<!-- TODO: What to do about the import, since TS throws error? Might be confusing -->
+```ts
+import { getBudgetAsync } from "./api";
+
+// Write an interface here
+async function getBudget() {
+  const result = await getBudgetAsync();
+  console.log(result);
+}
+
+getBudget();
+```
+
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/JYWwDg9gTgLgBAbzgcwKYwEIFcAmaYCCAzgJ4B2AxnAL5wBmUEIcARAHQD0AhmMCwNwBYAFAiOHOAHUowGKjhcycYGTlQ6XCvIAWqKKhFdSlelkoxgEJfmx50ACgCUiEXDgUrRePqJYANvAAvAoA7lyyKOi2+MTkFE5Cwm4eZEQQfqhsfhDI9j7+MI6J1CIiNrj4CUA)
+
+**Solution:**
+
 ```ts
 import { getBudgetAsync } from "./api";
 
@@ -1512,10 +1775,6 @@ async function getBudget() {
 
 getBudget();
 ```
-
-[Try in TS Playground](https://www.typescriptlang.org/play/)
-
-**Solution:**
 
 ## 37 - ADVANCED OBJECT TYPES: Optional Type Members
 
@@ -1558,7 +1817,7 @@ getUserName({
 });
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/PTAEHUCcEsBcFNQEMB2pooZAZkgxogBbyTwCwAUJdgK4p6zQD2aA5vLAKoDOJAckgC28ABRMADoxbcAlKADelUOmygxk5im4A6bNEjdYA4aABkp0BKlbtAGySHj8OYorLlpWDUho80prbwdkysIgAGACTyVpo6egZGQvAAvqBRMdJ2DonCyWEyANxKoMmUxZ7evv6BwaEZNjS8PkmFlKVUFOxcTU4irsrxjkkAXKAARACykNpjADTF9kPCo2MA8tyE+kxzxY0kKCPjhEwItkwA7igkAMwADAAsOxTJrR1dPPxJfcWDOfArEyQABN4LYMPAnso9s1luNBEw6LAkBgAMJgwQAIxITxeBSAA)
 
 **Solution:**
 
