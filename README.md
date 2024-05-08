@@ -813,32 +813,50 @@ function mathTutor(operationCallback: OperatorFunction) {
 // Call your functions below:
 mathTutor(wrongAdd);
 ```
-<!-- TODO: Same exercises as 20 -->
 ## 19 - CUSTOM TYPES: Generic Types
 
 Please provide type annotations for the variables `theFamily`, `someFamily`, `aFamily`, and `anotherFamily` in the code editor. Where appropriate, use the predefined type aliases `Human`, `Dog`, and the generic type `Family<T>`.
 
 ```ts
-function getFilledArray<T>(value: T, n: number): T[] {
-  return Array(n).fill(value);
-}
+type Human = { name: string; job: string };
+type Dog = { name: string; tailWagSpeed: number };
 
-let stringArray: string[];
-let numberArray: number[];
-let personArray: { name: string; age: number }[];
-let coordinateArray: [number, number][];
+// Do not change the code above this line.
+// Provide type annotations for the variables below:
 
-// Write your code below:
-stringArray = getFilledArray<string>("hi", 6);
-numberArray = getFilledArray<number>(9, 6);
-personArray = getFilledArray<{ name: string; age: number }>(
-  { name: "J. Dean", age: 24 },
-  6
-);
-coordinateArray = getFilledArray<[number, number]>([3, 4], 6);
+const theFamily = {
+    parents: [3, 4],
+    mate: 9,
+    children: [5, 30, 121]
+};
+const someFamily = {
+    parents: [true, true],
+    mate: false,
+    children: [false, false, true, true]
+};
+const aFamily = {
+    parents: [
+        { name: "Mom", job: "software engineer" },
+        { name: "Dad", job: "coding engineer" },
+    ],
+    mate: { name: "Matesky", job: "engineering coder" },
+    children: [{ name: "Babesky", job: "none" }]
+};
+const anotherFamily = {
+    parents: [
+        { name: "Momo", tailWagSpeed: 3 },
+        { name: "Dado", tailWagSpeed: 100 },
+    ],
+    mate: { name: "Cheems", tailWagSpeed: 7 },
+    children: [
+        { name: "Puppin", tailWagSpeed: 0.001 },
+        { name: "Puppenaut", tailWagSpeed: 0.0001 },
+        { name: "Puppenator", tailWagSpeed: 0.01 },
+    ]
+};
 ```
 
-[Try in TS Playground](https://www.typescriptlang.org/play/)
+[Try in TS Playground](https://www.typescriptlang.org/play/?#code/C4TwDgpgBAEgrgWwIYDsoF4oG8oqQiALigGdgAnASxQHMBuKAKwHsAjYsq2qAXzoChQkKABFmNDNlz4ipCtXpRgSSgBsA6khoBlSBAAmxFIlYRyvAfwD0V0c1zNgUAMYALVDWjBX0Z833QSKzMAG5erpQkUKrUEAB01rYACuShlAFK4IEoKI5IwJTMKFEAZszm3tAhSFRBqhBRpqrMAO6E-Px+xU6VAGL4aiCSWPxQY1BgNRAowCTEANoAzAA0UAAsALrLo+PIwLIAnNvjLhGq+uTTCwCsq4sADKsAjABMTxv8fJ1FZKTMBP0EINhjsxpNLjM5lB5hQ4BBVrCIFtQVA9rISkhVCR4Si3GoLldoRisfCoMTsQjyHDKXCPl8ur8kIDgZgRidwdNZgsUSccHgCMQAEQAWX+gtWLHYUEFJGYJWALSmUGmNFiZkFvGOJ3GfJkQpESH04qYbCFfn0CmVtDV5A1PC1Y2RJzRxF1AulwvyDQA1iBjZKhSqbZbzerNbizgSUAs3bJBQAhII+v0S03S3IoCB2ukCBlOVCOHzkZmqIaslEcyHc7U66TukX-ZjG5RqTQ6PSGKCLcM1sax-WGpsIlQaLS6CAGYhPe73HvjJ27L2uutxgDCPggCBIzZHbfHk6gAHY52M8ecIdXe-3pUk4GAwNQd62xx3iPc4jOniftdfBbf79MSBwMAT6ju2E6du+M73F+9o8rW-Jxv+kB4MA5SgXur5QFBsEOlAOZAA)
 
 **Solution:**
 
